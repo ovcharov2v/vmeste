@@ -7,4 +7,130 @@ append vars
 	- title = "Вместе есть"
 
 block content
-	h1 Hello
+	// Section Hero
+	section.section-hero
+		.container.section-hero__container
+			img.section-hero__logo(src="images/section-hero/logo.svg", alt="Вместе есть")
+			h1.heading1.section-hero__title Корпоратив? Мы вам устроим!
+			p.section-hero__date с 5 по 28 декабря
+			+picture("section-hero/ded-moroz", "png")(class="section-hero__img")
+			p.section-hero__text Отмечайте корпоратив в TanukiFamily со скидкой до 10% и welcome-игристым
+			button.button.button--big.section-hero__btn.section-hero__btn(data-scroll-to="order") Забронировать сейчас
+	// Section Conditions
+	section.section-conditions.container
+		h2.heading3.section-conditions__title Условия
+		.section-conditions__panel
+			.section-conditions__panel-list
+				.section-conditions__elem
+					//+picture("section-conditions/condition-icon1")(class="section-conditions__icon")
+					img(src="images/section-conditions/icon1.svg", alt)
+					p.section-conditions__elem-text При бронировании на 10 человек скидка 10%
+				.section-conditions__elem
+					img(src="images/section-conditions/icon2.svg", alt)
+					//+picture("section-conditions/condition-icon2")(class="section-conditions__icon")
+					p.section-conditions__elem-text При бронировании на 15 человек скидка 10% + бокал игристого каждому гостю
+			button.button(data-scroll-to="order") Забронировать сейчас
+		p.section-conditions__note Предложение действительно только по будним дням с понедельника по четверг до 28 декабря. Предоплата составляет 50% от общего депозита. Cтоимость депозита определяется для каждой сети отдельно, но не менее 2500 ₽. на человека
+	// Section Menu
+	section.section-menu.container
+		h2.heading3.section-menu__title Новогоднее меню в TanukiFamily
+		.section-menu__grid
+			+picture("section-menu/menu1")(class="section-menu__item")
+			+picture("section-menu/menu2")(class="section-menu__item")
+			+picture("section-menu/menu3")(class="section-menu__item")
+			+picture("section-menu/menu4")(class="section-menu__item")
+			+picture("section-menu/menu4")(class="section-menu__item")
+			+picture("section-menu/menu4")(class="section-menu__item")
+			+picture("section-menu/menu4")(class="section-menu__item")
+			+picture("section-menu/menu4")(class="section-menu__item")
+			+picture("section-menu/menu4")(class="section-menu__item")
+			+picture("section-menu/menu4")(class="section-menu__item")
+			+picture("section-menu/menu4")(class="section-menu__item")
+			+picture("section-menu/menu4")(class="section-menu__item")
+		.section-menu__btn-box
+			button.button(data-scroll-to="order") Забронировать сейчас
+	// Section Options
+	section.section-options.container
+		h2.heading3.section-options__title Доп опции на корпоративе
+		p.section-options__text Могут вас поздравить важные лица
+		.section-options__grid
+			figure.section-options__item
+				.section-options__photo-box
+					+picture("section-options/photo1")(class="section-options__photo")
+				figcaption
+					h3.section-options__item-title Алла Довлатова
+			figure.section-options__item
+				.section-options__photo-box
+					+picture("section-options/photo2")(class="section-options__photo")
+				figcaption
+					h3.section-options__item-title Дмитрий Кожома
+			figure.section-options__item
+				.section-options__photo-box
+					+picture("section-options/photo3")(class="section-options__photo")
+				figcaption
+					h3.section-options__item-title Никита Джигурда
+	// Section Atmosphere
+	section.section-atmosphere.container
+		h2.heading3.section-atmosphere__title Атмосфера наших праздников
+		.section-atmosphere__grid
+			+picture("section-atmosphere/photo1")(class="section-atmosphere__item")
+			+picture("section-atmosphere/photo2")(class="section-atmosphere__item")
+			+picture("section-atmosphere/photo3")(class="section-atmosphere__item")
+			+picture("section-atmosphere/photo4")(class="section-atmosphere__item")
+			+picture("section-atmosphere/photo5")(class="section-atmosphere__item")
+			+picture("section-atmosphere/photo6")(class="section-atmosphere__item")
+	// Section Order
+	section#order.section-order.container
+		form.section-order__form(action="#")
+			h2.heading3.section-order__title Оставить заявку
+			.section-order__form-row
+				.section-order__form-col
+					.form-group
+						select.select.form-group__input.form-group__input--select(name="city")
+							option(data-placeholder="true")
+							option(value='Москва') Москва
+							option(value='Санкт-Петербург') Санкт-Петербург
+							option(value='Казань') Казань
+						p.form-group__label Город
+					.form-group
+						select.select.form-group__input.form-group__input--select(name="brand")
+							option(data-placeholder="true")
+							option(value='Бренд 1') Бренд 1
+							option(value='Бренд 2') Бренд 2
+							option(value='Бренд 3') Бренд 3
+						p.form-group__label Бренд
+					.form-group
+						select.select.form-group__input.form-group__input--select(name="address")
+							option(data-placeholder="true")
+							option(value='Адрес ресторана 1') Адрес ресторана 1
+							option(value='Адрес ресторана 2') Адрес ресторана 2
+							option(value='Адрес ресторана 3') Адрес ресторана 3
+						p.form-group__label Адрес ресторана
+					.form-group.form-group--range
+						input#range-value-input.form-group__range-top-input(type="hidden", name="guests-counter")
+						.form-group__range-top
+							p.form-group__range-top-text Кол-во гостей
+							p.form-group__range-top-counter 100
+						.form-group__range
+				.section-order__form-col
+					.form-group
+						input.form-group__input#date(type="text", name="date", placeholder=" ", required)
+						label.form-group__label(for="date") Дата праздника
+					.form-group
+						input.form-group__input#name(type="text", name="name", placeholder=" ", required)
+						label.form-group__label(for="name") Имя
+					.form-group
+						input.form-group__input#phone(type="tel", name="phone", placeholder=" ", required)
+						label.form-group__label(for="phone") Телефон для связи
+					.form-group
+						input.form-group__input#email(type="email", name="email", placeholder=" ")
+						label.form-group__label(for="email") E-mail
+			.section-order__submit-box
+				button.button.button--small.section-order__submit(type="submit") Отправить
+				p.section-order__note Отправляя сообщение, вы принимаете условия соглашения об использовании сайта, в том числе в части обработки и использования персональных данных
+	// Modal
+	.modal
+		.modal__window
+			h2.heading3.modal__title Заявка отправлена
+			p.heading2.modal__text Ждем вас на празднике!
+			button.button.button--small.modal__close Ура!

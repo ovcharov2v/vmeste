@@ -1,0 +1,55 @@
+.section-conditions {
+	padding-top: 40px;
+	padding-bottom: 40px;
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__panel {
+		margin-bottom: 24px;
+		padding: 16px 32px 24px;
+		background-color: $color-white;
+		border-radius: 12px;
+		box-shadow: 0 2px 4px 0 rgba(125, 125, 125, 0.10), 0 26px 10px 0 rgba(125, 125, 125, 0.01);
+	}
+
+	&__panel-list {
+		margin-bottom: 24px;
+	}
+
+	&__elem {
+		display: grid;
+		grid-template: auto / 133px auto;
+		grid-gap: 24px;
+		padding: 16px 0;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid #F0F0F0;
+		}
+	}
+
+	&__icon {
+		max-width: 100%;
+	}
+
+	&__elem-text {
+		align-self: center;
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 700;
+	}
+
+	&__note {
+		display: flex;
+		font-size: 16px;
+		line-height: 20px;
+		font-weight: 500;
+		color: #7C7C7C;
+
+		&::before {
+			margin-right: 4px;
+			content: "*";
+		}
+	}
+}

@@ -1,10 +1,47 @@
 .button {
 	position: relative;
 	display: inline-block;
+	padding: 14px 24px;
+	background-color: $color-red;
+	border-radius: 100px;
+	border: none;
+	font-size: 18px;
+	line-height: 23px;
+	font-weight: 700;
+	color: $color-white;
 	text-align: center;
 	white-space: nowrap;
-	transition: color $transition-default, background-color $transition-default;
+	transition: background-color $transition-default;
+
+	@include desktop {
+		padding: 18px 32px;
+		font-size: 28px;
+		line-height: 32px;
+	}
 
 	&:hover {
+		background-color: darken($color-red, 10%);
+	}
+
+	&--big {
+		padding: 16px 24px;
+		font-size: 20px;
+		line-height: 25px;
+
+		@include tablet {
+			padding: 18px 28px;
+			font-size: 24px;
+			line-height: 30px;}
+
+		@include desktop {
+			padding: 31px 44px;
+			font-size: 35px;
+			line-height: 42px;}
+	}
+
+	&--small {
+		padding: 16px 24px;
+		font-size: 18px;
+		line-height: 23px;
 	}
 }

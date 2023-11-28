@@ -1,0 +1,47 @@
+.modal {
+	display: none;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color-black, .4);
+	transition: opacity $transition-default;
+
+	&--show {
+		opacity: 1;
+	}
+
+	&__window {
+		opacity: 0;
+		transform: translateY(20%);
+		margin: auto;
+		padding: 32px;
+		background-color: $color-white;
+		border-radius: 16px;
+		text-align: center;
+		transition: opacity $transition-default, transform $transition-default;
+
+		.modal--show & {
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	&__title {
+		margin-bottom: 24px;
+	}
+
+	&__text {
+		margin-bottom: 32px;
+		font-size: 18px;
+		line-height: 24px;
+		color: #7C7C7C;
+	}
+
+	&__close {
+		width: 100%;
+	}
+}
