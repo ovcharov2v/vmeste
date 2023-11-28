@@ -3,8 +3,25 @@
 	z-index: 0;
 	margin-bottom: 24px;
 
+	@include tablet {
+		margin-bottom: 40px;
+	}
+
+	@include desktop {
+		margin-bottom: 24px;
+	}
+
 	&--range {
 		padding-top: 7px;
+		margin-bottom: 40px;
+
+		@include tablet {
+			margin-bottom: 54px;
+		}
+
+		@include desktop {
+			margin-bottom: 24px;
+		}
 	}
 
 	&__input {
@@ -63,6 +80,7 @@
 		line-height: 20px;
 		color: rgba($color-black, .64);
 	}
+
 	&__range-top-counter {
 		padding: 0;
 		border: none;

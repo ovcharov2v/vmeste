@@ -17,12 +17,17 @@
 	&__window {
 		opacity: 0;
 		transform: translateY(20%);
-		margin: auto;
+		width: 100%;
+		max-width: 377px;
+		margin: auto auto 56px;
 		padding: 32px;
 		background-color: $color-white;
 		border-radius: 16px;
 		text-align: center;
 		transition: opacity $transition-default, transform $transition-default;
+
+		@include tablet {
+			margin: auto;}
 
 		.modal--show & {
 			opacity: 1;

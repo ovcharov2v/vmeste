@@ -1,22 +1,76 @@
 .section-options {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+
+	@include tablet {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
+	@include desktop {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 
 	&__title {
 		margin-bottom: 8px;
+
+		@include tablet {
+			margin-bottom: 4px;
+		}
+
+		@include desktop {
+			margin-bottom: 8px;
+		}
 	}
 
 	&__text {
-		font-size: 24px;
-		margin-bottom: 24px;
-		line-height: 28px;
+		margin-bottom: 16px;
+		font-size: 18px;
+		line-height: 24px;
 		font-weight: 700;
+
+		@include tablet {
+			margin-bottom: 24px;
+		}
+
+		@include desktop {
+			font-size: 24px;
+			line-height: 28px;}
+	}
+
+	&__slider {
+		overflow: unset;
+	}
+
+	&__slider-pagination {
+		display: flex;
+		justify-content: center;
+		margin-top: 16px;
+
+		@include tablet {
+			display: none;
+		}
+
+		.swiper-pagination-bullet {
+			width: 16px;
+			height: 4px;
+			background-color: #CCC5C4;
+			border-radius: 4px;
+			transition: background-color $transition-default;
+
+			&-active {
+				background-color: rgba(#000, .64);
+			}
+		}
 	}
 
 	&__grid {
-		display: grid;
-		grid-template: auto / repeat(3,1fr);
-		grid-gap: 10px;
+		@include tablet {
+			display: grid;
+			grid-template: auto / repeat(3,1fr);
+			grid-gap: 10px;
+		}
 	}
 
 	&__item {
@@ -39,13 +93,31 @@
 		bottom: 47px;
 		left: 50%;
 		transform: translateX(-50%) translateX(17px) rotate(-5.15deg);
-		padding: 8px 20px;
-		border-radius: 12px;
+		padding: 8px 18px;
+		border-radius: 11px;
 		background-color: $color-black;
-		font-size: 24px;
-		line-height: 28px;
+		font-size: 21px;
+		line-height: 25px;
 		font-weight: 700;
 		color: $color-white;
 		white-space: nowrap;
+
+		@include tablet {
+			bottom:36px;
+			border-radius: 8px;
+			padding: 5px 10px;
+			font-size: 15px;
+			line-height: 17px;
+			transform: translateX(-50%) translateX(5px) rotate(-5.15deg);
+		}
+
+		@include desktop {
+			bottom: 47px;
+			border-radius: 12px;
+			padding: 8px 20px;
+			font-size: 24px;
+			line-height: 28px;
+			transform: translateX(-50%) translateX(17px) rotate(-5.15deg);
+		}
 	}
 }

@@ -1,31 +1,70 @@
 .section-conditions {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 32px;
+	padding-bottom: 32px;
+
+	@include tablet {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+	@include desktop {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 
 	&__title {
-		margin-bottom: 24px;
+		margin-bottom: 16px;
+
+		@include tablet {
+			margin-bottom: 24px;
+		}
 	}
 
 	&__panel {
-		margin-bottom: 24px;
-		padding: 16px 32px 24px;
+		margin-bottom: 8px;
+		padding: 16px 24px 24px;
 		background-color: $color-white;
 		border-radius: 12px;
 		box-shadow: 0 2px 4px 0 rgba(125, 125, 125, 0.10), 0 26px 10px 0 rgba(125, 125, 125, 0.01);
+
+		@include tablet {
+			margin-bottom: 16px;
+		}
+
+		@include desktop {
+			margin-bottom: 24px;
+			padding: 16px 32px 24px;
+		}
 	}
 
 	&__panel-list {
 		margin-bottom: 24px;
+
+		@include tablet {
+			margin-bottom: 16px;
+		}
+
+		@include desktop {
+			margin-bottom: 24px;
+		}
 	}
 
 	&__elem {
 		display: grid;
-		grid-template: auto / 133px auto;
-		grid-gap: 24px;
-		padding: 16px 0;
+		grid-template: auto / 98px auto;
+		grid-gap: 16px;
+		padding: 8px 0;
 
 		&:not(:last-child) {
 			border-bottom: 1px solid #F0F0F0;
+		}
+
+		@include tablet {
+			padding: 16px 0;
+		}
+
+		@include desktop {
+			grid-template: auto / 133px auto;
+			grid-gap: 24px;
 		}
 	}
 
@@ -35,21 +74,43 @@
 
 	&__elem-text {
 		align-self: center;
-		font-size: 24px;
-		line-height: 28px;
+		font-size: 16px;
+		line-height: 20px;
 		font-weight: 700;
+
+		@include desktop {
+			font-size: 24px;
+			line-height: 28px;
+		}
 	}
 
 	&__note {
 		display: flex;
-		font-size: 16px;
-		line-height: 20px;
+		font-size: 12px;
+		line-height: 16px;
 		font-weight: 500;
 		color: #7C7C7C;
 
 		&::before {
 			margin-right: 4px;
 			content: "*";
+		}
+
+		@include tablet {
+			font-size: 14px;
+		}
+
+		@include desktop {
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+
+	&__button {
+		width: 100%;
+
+		@include tablet {
+			width: unset;
 		}
 	}
 }

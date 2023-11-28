@@ -3,6 +3,8 @@ import SlimSelect from 'slim-select'
 import noUiSlider from 'nouislider'
 import wNumb from 'wnumb'
 import IMask from 'imask'
+import Swiper from 'swiper'
+import { Pagination } from 'swiper/modules'
 
 // Check Webp support
 (function checkWebpSupport() {
@@ -159,3 +161,51 @@ modal.addEventListener('click', (evt) => {
 		closeModal()
 	}
 })
+
+
+// Mobile slider
+let optionsSlider = null;
+const initOptionsSlider = () => {
+	if (window.innerWidth > 768) {
+		if (optionsSlider) {
+			optionsSlider.destroy(true, true);
+			optionsSlider = null;
+		}
+	} else {
+		if (!optionsSlider) {
+			optionsSlider = new Swiper('.section-options__slider', {
+				modules: [Pagination],
+				slidesPerView: 1,
+				spaceBetween: 16,
+				pagination: {
+					el: '.section-options__slider-pagination'
+				},
+			});
+		}
+	}
+};
+initOptionsSlider();
+
+
+let atmSlider = null;
+const initAtmSlider = () => {
+	if (window.innerWidth > 768) {
+		if (atmSlider) {
+			atmSlider.destroy(true, true);
+			atmSlider = null;
+		}
+	} else {
+		if (!atmSlider) {
+			atmSlider = new Swiper('.section-atmosphere__slider', {
+				slidesPerView: 1.05,
+				spaceBetween: 16,
+			});
+		}
+	}
+};
+initAtmSlider();
+
+window.addEventListener('resize', () => {
+	initOptionsSlider();
+	initAtmSlider();
+});
