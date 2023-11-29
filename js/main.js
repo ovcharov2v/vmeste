@@ -324,27 +324,6 @@ modal.addEventListener('click', function (evt) {
 });
 
 // Mobile slider
-var optionsSlider = null;
-var initOptionsSlider = function initOptionsSlider() {
-  if (window.innerWidth > 768) {
-    if (optionsSlider) {
-      optionsSlider.destroy(true, true);
-      optionsSlider = null;
-    }
-  } else {
-    if (!optionsSlider) {
-      optionsSlider = new swiper__WEBPACK_IMPORTED_MODULE_5__["default"]('.section-options__slider', {
-        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_6__["Pagination"]],
-        slidesPerView: 1,
-        spaceBetween: 16,
-        pagination: {
-          el: '.section-options__slider-pagination'
-        }
-      });
-    }
-  }
-};
-initOptionsSlider();
 var atmSlider = null;
 var initAtmSlider = function initAtmSlider() {
   if (window.innerWidth > 768) {
@@ -363,7 +342,6 @@ var initAtmSlider = function initAtmSlider() {
 };
 initAtmSlider();
 window.addEventListener('resize', function () {
-  initOptionsSlider();
   initAtmSlider();
 });
 
