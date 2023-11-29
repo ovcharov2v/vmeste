@@ -305,7 +305,7 @@ var showModal = function showModal() {
   modal.style.display = 'flex';
   setTimeout(function () {
     modal.classList.add('modal--show');
-  });
+  }, 50);
 };
 var closeModal = function closeModal() {
   modal.classList.remove('modal--show');
