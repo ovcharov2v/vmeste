@@ -107,7 +107,7 @@ if (form) {
 	form.addEventListener('submit', (evt) => {
 		evt.preventDefault()
 		const data = new URLSearchParams(new FormData(form));
-		fetch("http://localhost:3000/", {
+		fetch("https://ovcharov2v.github.io/vmeste/index.html", {
 			method: 'post',
 			body: data,
 		})
@@ -143,7 +143,7 @@ const showModal = () => {
 	modal.style.display = 'flex'
 	setTimeout(() => {
 		modal.classList.add('modal--show')
-	})
+	}, 50)
 }
 
 const closeModal = () => {
