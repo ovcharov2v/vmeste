@@ -164,29 +164,6 @@ modal.addEventListener('click', (evt) => {
 
 
 // Mobile slider
-let optionsSlider = null;
-const initOptionsSlider = () => {
-	if (window.innerWidth > 768) {
-		if (optionsSlider) {
-			optionsSlider.destroy(true, true);
-			optionsSlider = null;
-		}
-	} else {
-		if (!optionsSlider) {
-			optionsSlider = new Swiper('.section-options__slider', {
-				modules: [Pagination],
-				slidesPerView: 1,
-				spaceBetween: 16,
-				pagination: {
-					el: '.section-options__slider-pagination'
-				},
-			});
-		}
-	}
-};
-initOptionsSlider();
-
-
 let atmSlider = null;
 const initAtmSlider = () => {
 	if (window.innerWidth > 768) {
@@ -206,6 +183,5 @@ const initAtmSlider = () => {
 initAtmSlider();
 
 window.addEventListener('resize', () => {
-	initOptionsSlider();
 	initAtmSlider();
 });

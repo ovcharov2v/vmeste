@@ -14,9 +14,35 @@
 
 	&__title {
 		margin-bottom: 16px;
+		max-width: 560px;
 
 		@include tablet {
 			margin-bottom: 32px;
+			max-width: 660px;
+		}
+
+		@include desktop {
+			max-width: 950px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 16px;
+		font-size: 28px;
+		line-height: 32px;
+		font-weight: 700;
+
+		@include tablet {
+			margin-bottom: 16px;
+			font-size: 28px;
+			line-height: 32px;
+		}
+
+		@include desktop {
+			margin-bottom: 24px;
+			font-size: 40px;
+			line-height: 48px;
+			letter-spacing: -.04em
 		}
 	}
 
@@ -49,7 +75,8 @@
 
 		@include tablet {
 			display: flex;
-			align-items: center;}
+			align-items: center;
+		}
 	}
 
 	&__submit {
@@ -58,7 +85,8 @@
 
 		@include tablet {
 			width: unset;
-			margin-right: 16px;}
+			margin-right: 16px;
+		}
 	}
 
 	&__note {

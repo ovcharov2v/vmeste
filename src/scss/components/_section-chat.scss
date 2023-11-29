@@ -1,0 +1,173 @@
+.section-chat {
+	padding-top: 40px;
+	padding-bottom: 24px;
+
+	&__elem {
+		display: flex;
+		align-items: flex-end;
+		margin-right: 50px;
+
+		@include tablet {
+			margin-right: 63px;
+		}
+
+		@include desktop {
+			margin-right: 81px;
+		}
+
+		&--right {
+			flex-direction: row-reverse;
+			margin-right: 0;
+			margin-left: 50px;
+
+			@include tablet {
+				margin-right: 0;
+				margin-left: 63px;
+			}
+
+			@include desktop {
+				margin-right: 0;
+				margin-left: 81px;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__elem-content {
+		position: relative;
+		padding: 14px;
+		border-radius: 16px;
+		background-color: $color-white;
+		box-shadow: 0 2px 4px 0 rgba(125, 125, 125, 0.10), 0 26px 10px 0 rgba(125, 125, 125, 0.01);
+
+		&::before {
+			position: absolute;
+			bottom: 0;
+			left: -6px;
+			width: 22px;
+			height: 16px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='37' height='25' viewBox='0 0 37 25' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.31719 0.784912H12.1962L36.1876 0.784916C36.1876 7.14784 33.66 13.2502 29.1607 17.7494C24.6614 22.2487 18.5591 24.7764 12.1962 24.7764C8.06513 24.7764 4.04395 23.7109 0.499973 21.7323C5.8043 18.3172 9.31719 12.3602 9.31719 5.58274V0.784912Z' fill='white'/%3E%3C/svg%3E");
+			background-size: contain;
+			background-repeat: no-repeat;
+			content: "";
+		}
+
+		@include tablet {
+			border-radius: 20px;
+			padding: 16px;
+
+			&::before {
+				left: -8px;
+				width: 34px;
+				height: 22px;
+			}
+		}
+
+		@include desktop {
+			border-radius: 28px;
+			padding: 24px 32px;
+
+			&::before {
+				width: 36px;
+				height: 24px;
+			}
+		}
+
+		.section-chat__elem--right & {
+			&::before {
+				left: unset;
+				right: -6px;
+				transform: scaleX(-1);
+			}
+
+			@include tablet {
+				&::before {
+					left: unset;
+					right: -8px;
+				}
+			}
+		}
+	}
+
+	&__elem-text {
+		font-size: 14px;
+		line-height: 16px;
+		font-weight: 700;
+
+		@include tablet {
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		@include desktop {
+			font-size: 24px;
+			line-height: 30px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 12px;
+
+			@include tablet {
+				margin-bottom: 16px;
+			}
+
+			@include desktop {
+				margin-bottom: 24px;
+			}
+		}
+	}
+
+	&__elem-smile {
+		flex-shrink: 0;
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		transform: translateY(2px);
+
+		@include tablet {
+			width: 18px;
+			height: 18px;
+		}
+
+		@include desktop {
+			width: 24px;
+			height: 24px;
+		}
+
+		&--big {
+			width: 40px;
+			height: 40px;
+			margin-right: 8px;
+
+			@include tablet {
+				width: 52px;
+				height: 52px;
+				margin-right: 11px;
+			}
+
+			@include desktop {
+				width: 72px;
+				height: 72px;
+				margin-right: 9px;
+			}
+
+			.section-chat__elem--right & {
+				margin-right: 0;
+				margin-left: 8px;
+
+				@include tablet {
+					margin-right: 0;
+					margin-left: 11px;
+				}
+
+				@include desktop {
+					margin-right: 0;
+					margin-left: 9px;
+				}
+			}
+		}
+	}
+}

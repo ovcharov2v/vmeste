@@ -15,61 +15,109 @@ block content
 			h1.heading1.section-hero__title Корпоратив? Мы вам устроим!
 			p.section-hero__date с 5 по 28 декабря
 			+picture("section-hero/ded-moroz", "png")(class="section-hero__img")
-			p.section-hero__text Отмечайте корпоратив в TanukiFamily со скидкой до 10% и welcome-игристым
+			p.section-hero__text Отмечайте корпоратив в TanukiFamily со скидкой до 10% и welcome-drink
 			button.button.button--big.section-hero__btn.section-hero__btn(data-scroll-to="order") Забронировать сейчас
+	// Section Family
+	.section-family.container
+		img.section-family__logo(src="images/section-family/logo-tanuki.svg", alt)
+		.section-family__grid
+			.section-family__grid-elem
+				+picture("section-family/logo1", "png")(class="section-family__grid-elem-logo")
+				.section-family__grid-elem-content
+					h3.section-family__grid-elem-title Тануки
+					p.section-family__grid-elem-text Японские рестораны, кейтеринг и доставка
+			.section-family__grid-elem
+				+picture("section-family/logo2", "png")(class="section-family__grid-elem-logo")
+				.section-family__grid-elem-content
+					h3.section-family__grid-elem-title Пицца
+					p.section-family__grid-elem-text Пицца, комбо и закуски с доставкой
+			.section-family__grid-elem
+				+picture("section-family/logo3", "png")(class="section-family__grid-elem-logo")
+				.section-family__grid-elem-content
+					h3.section-family__grid-elem-title Ерш
+					p.section-family__grid-elem-text Гриль-рестораны, кейтеринг и доставка
+			.section-family__grid-elem
+				+picture("section-family/logo4", "png")(class="section-family__grid-elem-logo")
+				.section-family__grid-elem-content
+					h3.section-family__grid-elem-title Каспийка
+					p.section-family__grid-elem-text Рыбные рестораны, кейтеринг и доставка
 	// Section Conditions
 	section.section-conditions.container
-		h2.heading3.section-conditions__title Условия
+		h2.heading3.section-conditions__title Только для вас!
 		.section-conditions__panel
 			.section-conditions__panel-list
 				.section-conditions__elem
 					img.section-conditions__icon(src="images/section-conditions/icon1.svg", alt)
-					p.section-conditions__elem-text При бронировании на 10 человек скидка 10%
+					p.section-conditions__elem-text Скидка 10% на меню кухни и безалкогольные напитки при бронировании на компанию от 10 человек
 				.section-conditions__elem
 					img.section-conditions__icon(src="images/section-conditions/icon2.svg", alt)
-					p.section-conditions__elem-text При бронировании на 15 человек скидка 10% + бокал игристого каждому гостю
+					p.section-conditions__elem-text Скидка 10% и welcome-дринк каждому на компании от 15 человек
 			button.button.section-conditions__button(data-scroll-to="order") Забронировать сейчас
-		p.section-conditions__note Предложение действительно только по будним дням с понедельника по четверг до 28 декабря. Предоплата составляет 50% от общего депозита. Cтоимость депозита определяется для каждой сети отдельно, но не менее 2500 ₽ на человека
+		p.section-conditions__note Для бронирования доступны даты с понедельника по четверг до 28 декабря включительно. Стоимость депозита зависит от ресторана, но не менее 2500 ₽ на человека. Подтверждая бронь, будьте готовы внести предоплату в размере 50% от общего депозита. Скидка не распространяется на алкоголь, устриц и ежей (подробности уточняйте у менеджера при бронировании).
+	// Section Chat
+	.section-chat.container
+		.section-chat__elem.section-chat__elem--right
+			+picture("section-chat/smile1", "png")(class="section-chat__elem-smile section-chat__elem-smile--big")
+			.section-chat__elem-content
+				p.section-chat__elem-text Как должен пройти корпоратив?
+		.section-chat__elem
+			+picture("section-chat/smile2", "png")(class="section-chat__elem-smile section-chat__elem-smile--big")
+			.section-chat__elem-content
+				p.section-chat__elem-text Во-первых, весело
+					|
+					|
+					+picture("section-chat/smile3", "png")(class="section-chat__elem-smile")
+					| , чтобы оторваться на год вперед. Во-вторых, вкусно
+					|
+					|
+					+picture("section-chat/smile4", "png")(class="section-chat__elem-smile")
+					| , чтобы каждый хорошенько наелся. В-третьих, нужно хорошее барное меню
+					|
+					|
+					+picture("section-chat/smile5", "png")(class="section-chat__elem-smile")
+					| , тут даже пояснять не надо. А еще бы атмосферу бы незабываемую
+					|
+					|
+					+picture("section-chat/smile6", "png")(class="section-chat__elem-smile")
+					| ...
+		.section-chat__elem
+			+picture("section-chat/logo", "png")(class="section-chat__elem-smile section-chat__elem-smile--big")
+			.section-chat__elem-content
+				p.section-chat__elem-text
+					+picture("section-chat/smile7", "png")(class="section-chat__elem-smile")
+					|
+					|
+					|Прям наши рестораны описали — один в один
+					|
+					|
+					+picture("section-chat/smile8", "png")(class="section-chat__elem-smile")
+					|!
+				p.section-chat__elem-text Выбирайте поближе к офису или дому, а мы устроим веселый праздник для максимального увеличения корпоративного духа.
 	// Section Menu
 	section.section-menu.container
 		h2.heading3.section-menu__title Новогоднее меню в TanukiFamily
+		p.section-menu__text Мы подготовили для вас новогодние новинки меню — волнующие вкусы праздника, которые точно запомнятся всем гостям
 		.section-menu__grid
-			+picture("section-menu/menu1")(class="section-menu__item")
-			+picture("section-menu/menu2")(class="section-menu__item")
-			+picture("section-menu/menu3")(class="section-menu__item")
-			+picture("section-menu/menu4")(class="section-menu__item")
-			+picture("section-menu/menu4")(class="section-menu__item")
-			+picture("section-menu/menu4")(class="section-menu__item")
-			+picture("section-menu/menu4")(class="section-menu__item")
-			+picture("section-menu/menu4")(class="section-menu__item")
-			+picture("section-menu/menu4")(class="section-menu__item")
-			+picture("section-menu/menu4")(class="section-menu__item")
-			+picture("section-menu/menu4")(class="section-menu__item")
-			+picture("section-menu/menu4")(class="section-menu__item")
+			.section-menu__item
+				+picture("section-menu/menu1")(class="section-menu__item-img")
+			.section-menu__item
+				+picture("section-menu/menu2")(class="section-menu__item-img")
+			.section-menu__item.section-menu__item--hide-mobile
+				+picture("section-menu/menu3")(class="section-menu__item-img")
+			.section-menu__item
+				+picture("section-menu/menu4")(class="section-menu__item-img")
+			.section-menu__item
+				+picture("section-menu/menu5")(class="section-menu__item-img")
+			.section-menu__item
+				+picture("section-menu/menu6")(class="section-menu__item-img")
+			.section-menu__item
+				+picture("section-menu/menu7")(class="section-menu__item-img")
+			.section-menu__item
+				+picture("section-menu/menu8")(class="section-menu__item-img")
+			.section-menu__item
+				+picture("section-menu/menu9")(class="section-menu__item-img")
 		.section-menu__btn-box
 			button.button(data-scroll-to="order") Забронировать сейчас
-	// Section Options
-	section.section-options.container
-		h2.heading3.section-options__title Доп опции на корпоративе
-		p.section-options__text Могут вас поздравить важные лица
-		.swiper.section-options__slider
-			.section-options__grid.swiper-wrapper
-				figure.section-options__item.swiper-slide
-					.section-options__photo-box
-						+picture("section-options/photo1")(class="section-options__photo")
-					figcaption
-						h3.section-options__item-title Алла Довлатова
-				figure.section-options__item.swiper-slide
-					.section-options__photo-box
-						+picture("section-options/photo2")(class="section-options__photo")
-					figcaption
-						h3.section-options__item-title Дмитрий Кожома
-				figure.section-options__item.swiper-slide
-					.section-options__photo-box
-						+picture("section-options/photo3")(class="section-options__photo")
-					figcaption
-						h3.section-options__item-title Никита Джигурда
-		.section-options__slider-pagination
 	// Section Atmosphere
 	section.section-atmosphere.container
 		h2.heading3.section-atmosphere__title Атмосфера наших праздников
@@ -89,8 +137,9 @@ block content
 					+picture("section-atmosphere/photo6")(class="section-atmosphere__item")
 	// Section Order
 	section#order.section-order.container
+		h2.heading3.section-order__title Успейте забронировать свой идеальный новогодний корпоратив!
 		form.section-order__form(action="#")
-			h2.heading3.section-order__title Оставить заявку
+			h3.section-order__subtitle Оставить заявку
 			.section-order__form-row
 				.section-order__form-col
 					.form-group
