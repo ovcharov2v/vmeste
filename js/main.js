@@ -274,7 +274,7 @@ if (form) {
   form.addEventListener('submit', function (evt) {
     evt.preventDefault();
     var data = new URLSearchParams(new FormData(form));
-    fetch("http://localhost:3000/", {
+    fetch("https://ovcharov2v.github.io/vmeste/index.html", {
       method: 'post',
       body: data
     }).then(function (response) {
