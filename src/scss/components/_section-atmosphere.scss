@@ -22,27 +22,38 @@
 
 	&__slider {
 		overflow: unset;
+		position: relative;
+
+		@include tablet {
+			&::before {
+				background-size: contain;
+				background-position: center;
+			}
+		}
+
+		&::after {
+			@include background-image("../images/section-atmosphere/snow", "png");
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100vw;
+			max-width: 1440px;
+			height: 100%;
+			background-size: auto 100%;
+			background-position: left center;
+			background-repeat: no-repeat;
+			pointer-events: none;
+			content: "";
+		}
 	}
 
 	&__grid {
-		position: relative;
-
 		@include tablet {
 			display: grid;
 			grid-template: auto / repeat(3, 1fr);
 			grid-gap: 8px;
-		}
-
-		&::after {
-			position: absolute;
-			top: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			max-width: 1440px;
-			height: 100%;
-			background-image: url("../images/section-atmosphere/snow@1x.png");
-			pointer-events: none;
-			content: "";
 		}
 	}
 
