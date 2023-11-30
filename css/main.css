@@ -2764,29 +2764,44 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       .section-atmosphere__title {
         margin-bottom: 24px; } }
   .section-atmosphere__slider {
-    overflow: unset; }
-  .section-atmosphere__grid {
+    overflow: unset;
     position: relative; }
     @media (min-width: 768px) {
-      .section-atmosphere__grid {
-        display: -ms-grid;
-        display: grid;
-        -ms-grid-rows: auto;
-        -ms-grid-columns: 1fr 8px 1fr 8px 1fr;
-            grid-template: auto/repeat(3, 1fr);
-        grid-gap: 8px; } }
-    .section-atmosphere__grid::after {
+      .section-atmosphere__slider::before {
+        background-size: contain;
+        background-position: center; } }
+    .section-atmosphere__slider::after {
+      background-image: url("../images/section-atmosphere/snow@1x.webp");
       position: absolute;
+      z-index: 1;
       top: 0;
       left: 50%;
       -webkit-transform: translateX(-50%);
           -ms-transform: translateX(-50%);
               transform: translateX(-50%);
+      width: 100vw;
       max-width: 1440px;
       height: 100%;
-      background-image: url("../images/section-atmosphere/snow@1x.png");
+      background-size: auto 100%;
+      background-position: left center;
+      background-repeat: no-repeat;
       pointer-events: none;
       content: ""; }
+      .no-webp-support .section-atmosphere__slider::after {
+        background-image: url("../images/section-atmosphere/snow@1x.png"); }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .section-atmosphere__slider::after {
+          background-image: url("../images/section-atmosphere/snow@2x.webp"); }
+          .no-webp-support .section-atmosphere__slider::after {
+            background-image: url("../images/section-atmosphere/snow@2x.png"); } }
+  @media (min-width: 768px) {
+    .section-atmosphere__grid {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-rows: auto;
+      -ms-grid-columns: 1fr 8px 1fr 8px 1fr;
+          grid-template: auto/repeat(3, 1fr);
+      grid-gap: 8px; } }
   .section-atmosphere__item {
     display: block;
     width: 100%;
